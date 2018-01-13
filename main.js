@@ -90,3 +90,26 @@ const ageMap = ages
     .map(age => Math.sqrt(age))
     .map(age => age *2);
 console.log(ageMap);
+
+
+//Sort
+// Sort compnaies by start year
+// const sortedCompanies = companies.sort(function(c1, c2) {
+//     if(c1.start > c2.start){
+//         return 1;
+//     } else {
+//         return -1;
+//     }
+// });
+
+//using es6 arraow functions
+const sortedCompanies = companies.sort((c1, c2) => (c1.start > c2.start)? 1:-1);
+
+console.log(sortedCompanies);
+
+//Sort ages ascending
+const agesSort = ages.sort((a,b) => a-b);
+console.log(agesSort);
+//Sort ages descending
+const agesDSort = ages.sort((a,b) => b-a);
+console.log(agesDSort);
