@@ -92,7 +92,8 @@ const ageMap = ages
 console.log(ageMap);
 
 
-//Sort
+//Sort function
+
 // Sort compnaies by start year
 // const sortedCompanies = companies.sort(function(c1, c2) {
 //     if(c1.start > c2.start){
@@ -113,3 +114,23 @@ console.log(agesSort);
 //Sort ages descending
 const agesDSort = ages.sort((a,b) => b-a);
 console.log(agesDSort);
+
+
+// reduce function
+
+// let ageSum = 0;
+// for(let i=0;i<ages.length;i++){
+//     ageSum = ageSum + ages[i];
+// }
+
+// const ageSum = ages.reduce(function(total, age) {
+//     return total + age;
+// }, 0);
+
+const ageSum = ages.reduce((total, age) => total + age, 0);
+
+console.log(ageSum);
+
+// TotalYears of all comapnies
+const totalYears = companies.reduce((total, company) => total + company.end - company.start, 0);
+console.log(totalYears);
