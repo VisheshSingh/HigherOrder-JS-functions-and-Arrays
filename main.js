@@ -63,3 +63,30 @@ console.log(eigtyCompanies);
 // Get the companies that latest atleast 10 years
 const decadeOld = companies.filter(company => (company.end - company.start) >= 10);
 console.log(decadeOld);
+
+// map => It is used for creating new arrays from existing arrays
+// create array of comapny names
+const companyNames = companies.map(function(company) {
+    return company.name;
+});
+
+console.log(companyNames);
+
+// const testMap = companies.map(function(company) {
+//     return `${company.name} [${company.start} - ${company.end}]`;
+// });
+
+const testMap = companies.map((company) => `${company.name} [${company.start} - ${company.end}]`);
+
+console.log(testMap);
+
+// return sqrt of ages
+const agesSqrt = ages.map(age => Math.sqrt(age));
+console.log(agesSqrt);
+
+// Return squared and multiple by 2
+
+const ageMap = ages
+    .map(age => Math.sqrt(age))
+    .map(age => age *2);
+console.log(ageMap);
